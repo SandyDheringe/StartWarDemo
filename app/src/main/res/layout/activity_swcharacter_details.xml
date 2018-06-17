@@ -17,6 +17,7 @@
             android:orientation="vertical">
 
             <TextView
+                android:padding="@dimen/padding_7dp"
                 style="@style/label_style"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -26,7 +27,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="7dp">
+                android:padding="@dimen/padding_7dp">
 
                 <TextView
                     style="@style/label_style"
@@ -47,7 +48,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="7dp">
+                android:padding="@dimen/padding_7dp">
 
                 <TextView
                     style="@style/label_style"
@@ -68,7 +69,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="7dp">
+                android:padding="@dimen/padding_7dp">
 
                 <TextView
                     style="@style/label_style"
