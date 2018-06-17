@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="retryCallback"
+            type="com.arrk.starwardemo.adapter.listener.RetryListener" />
+
+        <variable
+            name="networkState"
+            type="com.arrk.starwardemo.repository.NetworkState" />
+
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:background="@color/colorBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/charactersSwipeRefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/charactersRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_12dp"
+                tools:listitem="@layout/item_character" />
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <include
+            layout="@layout/item_network_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:callback="@{() -> retryCallback.retry()}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/charactersSwipeRefreshLayout"
+            app:networkState="@{networkState}" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</layout>

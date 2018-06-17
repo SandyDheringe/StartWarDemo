@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="character"
+            type="com.arrk.starwardemo.model.CharacterEntity" />
+
+        <variable
+            name="swCharacterClickHandler"
+            type="com.arrk.starwardemo.adapter.listener.SWCharacterClickHandler" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_5dp"
+        android:background="@color/colorListItem"
+        android:onClick="@{(view)-> swCharacterClickHandler.onCharacterClicked(view,character)}"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:layout_width="@dimen/img_width"
+            android:layout_height="@dimen/img_height"
+            android:src="@mipmap/ic_launcher"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/UserName"
+            style="@style/list_value_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/margin_5dp"
+            android:text="@{character.name}"
+            tools:text="character name" />
+
+
+    </LinearLayout>
+
+</layout>

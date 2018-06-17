@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">StarWar</string>
+
+    <string name="retry">Retry</string>
+    <string name="basic_details">Basic Details</string>
+    <string name="name">Name</string>
+    <string name="height_in_meter">Height(in meter)</string>
+    <string name="mass_in_kg">Mass(in KG)</string>
+    <string name="datetime">DateTime</string>
+
+</resources>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="character"
+            type="com.arrk.starwardemo.model.CharacterEntity" />
+    </data>
+
+
+
+        <LinearLayout
+            android:background="@color/colorBackground"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/label_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:text="@string/basic_details" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="7dp">
+
+                <TextView
+                    style="@style/label_style"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:text="@string/name" />
+
+                <TextView
+                    style="@style/value_style"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:gravity="right"
+                    android:text="@{character.name}" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="7dp">
+
+                <TextView
+                    style="@style/label_style"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:text="@string/height_in_meter" />
+
+                <TextView
+                    style="@style/value_style"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:gravity="right"
+                    android:text="@{character.getHeightInMeter()}" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="7dp">
+
+                <TextView
+                    style="@style/label_style"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:text="@string/mass_in_kg" />
+
+                <TextView
+                    style="@style/value_style"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:gravity="right"
+                    android:text="@{character.mass}" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_7dp">
+
+                <TextView
+                    style="@style/label_style"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:text="@string/datetime" />
+
+                <TextView
+                    style="@style/value_style"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:gravity="right"
+                    android:text="@{character.getDateAndTime()}" />
+            </LinearLayout>
+        </LinearLayout>
+</layout>

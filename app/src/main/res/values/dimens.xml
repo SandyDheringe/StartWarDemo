@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_font_size">18sp</dimen>
+    <dimen name="margin_12dp">12dp</dimen>
+    <dimen name="margin_7dp">7dp</dimen>
+    <dimen name="margin_5dp">5dp</dimen>
+    <dimen name="img_width">60dp</dimen>
+    <dimen name="img_height">60dp</dimen>
+    <dimen name="padding_8dp">8dp</dimen>
+</resources>
