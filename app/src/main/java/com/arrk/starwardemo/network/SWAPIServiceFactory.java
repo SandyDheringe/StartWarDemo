@@ -1,5 +1,6 @@
 package com.arrk.starwardemo.network;
 
+import com.arrk.starwardemo.util.Constants;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -13,7 +14,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 import timber.log.Timber;
 
 /**
- *
+ * @auther sandeep.dheringe
  */
 public class SWAPIServiceFactory
 {
@@ -27,7 +28,7 @@ public class SWAPIServiceFactory
     private static SWAPIService makeSWAPIService(OkHttpClient okHttpClient, Gson gson)
     {
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://swapi.co/api/")
+                .baseUrl(Constants.BASE_URL)
                 .client(okHttpClient)
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create(gson))
